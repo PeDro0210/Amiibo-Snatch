@@ -1,4 +1,5 @@
 .pio/build/esp32dev/src/main.cpp.o: src/main.cpp \
+ src/blockReader/blockReader.h \
  /home/pedro0210/.platformio/lib/MFRC522/src/MFRC522.h \
  /home/pedro0210/.platformio/lib/MFRC522/src/require_cpp11.h \
  /home/pedro0210/.platformio/lib/MFRC522/src/deprecated.h \

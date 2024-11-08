@@ -1,2 +1,6 @@
 Diagnostics:
-  Suppress: ovl_no_viable_member_function_in_call
+  Suppress: 
+  - ovl_no_viable_member_function_in_call
+  - drv_unknown_argument
+  - drv_unknown_argument_with_suggestion
+  - pp_file_not_found

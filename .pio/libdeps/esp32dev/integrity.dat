@@ -1,1 +1,7 @@
 MFRC522
+bblanchon/ArduinoJson@^7.2.0
+SPIFFS
+me-no-dev/ESP Async WebServer@^1.2.4
+FS
+arduino-libraries/WiFi
+me-no-dev/AsyncTCP@^1.1.1
