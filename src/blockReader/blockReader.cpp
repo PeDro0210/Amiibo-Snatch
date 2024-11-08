@@ -57,16 +57,6 @@ void readPage(int page) {
     return;
   }
 
-  // Print the page data
-  Serial.print("Page ");
-  Serial.print(page);
-  Serial.print(": ");
-  for (byte i = 0; i < 4; i++) {
-    Serial.print(buffer[i],
-                 HEX); // TODO:add it in to byte array for later handleling
-    Serial.print(" ");
-  }
-  Serial.println();
   byteCaster(buffer);
 }
 

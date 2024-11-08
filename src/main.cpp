@@ -15,22 +15,22 @@
 //------ESP32 RFID setting ----------------
 
 const char *ssid = "Internet de Pedro";
-const char *password = "4NJ668300657";
+const char *password = "4NJ667300657";
 
 void setup() {
-  Serial.begin(96000);
+  Serial.begin(9600);
   SPI.begin();     // Initialize SPI bus
   rfid.PCD_Init(); // Initialize MFRC522 reader
-                   //
+
   // WiFi.begin((char *)ssid, (char *)password);
   // while (WiFi.status() != WL_CONNECTED) {
-  //  delay(1000);
-  // Serial.println("Connecting to WiFi...");
-  // }
+  // delay(1000);
+  // Serial.println("Connecting to WiFi..");
+  //}
 
-  // Serial.println("Connected to WiFi");
-  // Serial.print("IP Address: ");
   // Serial.println(WiFi.localIP());
+  // endpoints();
+  // server.begin();
 }
 
 void loop() {
@@ -40,6 +40,7 @@ void loop() {
   }
 
   readingRC522();
+  idPrinting();
 
   // Halt communication with the card
   rfid.PICC_HaltA();

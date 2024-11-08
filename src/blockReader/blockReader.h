@@ -7,6 +7,11 @@
 
 std::string getModelId();
 void readingRC522();
+
+void readPage(int page);
+
+void idPrinting();
+
 extern MFRC522 rfid;
 
 extern std::string id_model;
