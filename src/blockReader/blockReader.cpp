@@ -1,4 +1,7 @@
 #include "blockReader.h"
+#include <iomanip>
+#include <sstream>
+#include <string>
 
 //* ------
 // *             MFRC522
@@ -17,17 +20,27 @@
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 
-std::string id;
+std::string id_model;
 
 void byteCaster(byte buffer[]) {
-  int pos = 0;
+  std::stringstream ss;
 
   for (byte i = 0; i < 4; i++) {
-    // TODO: see how to cast bytes to char
+    if (buffer[i] == 0) {
+      id_model += "00";
+    } else {
+      ss << std::hex << std::setw(2) << std::setfill('0')
+         << static_cast<int>(buffer[i]);
+      id_model += ss.str();
+      ss.str(""); // cleaning it
+    }
   }
 }
 
-void idPrinting() { Serial.println("yes"); }
+void idPrinting() {
+  Serial.println(id_model.c_str());
+  id_model = ""; // restart the id
+}
 
 void readPage(int page) {
   byte buffer[18]; // Buffer to hold read data (4 bytes per page)
@@ -53,7 +66,24 @@ void readPage(int page) {
                  HEX); // TODO:add it in to byte array for later handleling
     Serial.print(" ");
   }
-
-  byteCaster(buffer);
   Serial.println();
+  byteCaster(buffer);
+}
+
+std::string getModelId() {
+  // Read only pages 21 and 22 (model ID inform in )
+  readPage(21);
+  delay(10); // Small delay for readability
+  readPage(22);
+  delay(10); // Small delay for readability
+
+  return id_model;
+}
+
+void readingRC522() {
+  // Read only pages 21 and 22 (model ID inform in )
+  readPage(21);
+  delay(10); // Small delay for readability
+  readPage(22);
+  delay(10); // Small delay for readability
 }

@@ -138,4 +138,39 @@
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src/SPI.h \
- /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
+ src/webServer/webServer.h src/blockReader/blockReader.h \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.h \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.hpp \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Configuration.hpp \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/ESPAsyncWebServer.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/StringArray.h \
+ .pio/libdeps/esp32dev/WiFi/src/WiFi.h \
+ .pio/libdeps/esp32dev/WiFi/src/utility/wl_definitions.h \
+ .pio/libdeps/esp32dev/WiFi/src/utility/wl_types.h \
+ .pio/libdeps/esp32dev/WiFi/src/WiFiClient.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Client.h \
+ .pio/libdeps/esp32dev/WiFi/src/WiFiServer.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Server.h \
+ .pio/libdeps/esp32dev/AsyncTCP/src/AsyncTCP.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/pbuf.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/opt.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/lwipopts.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include/sys/ioctl.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_system/include/esp_task.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/FreeRTOSConfig.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/netif/dhcp_state.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/sntp/sntp_get_set_time.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/debug.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/arch.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/arch/cc.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/arch/sys_arch.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/port/esp32/include/arch/vfs_lwip.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/lwip/lwip/src/include/lwip/err.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/WebResponseImpl.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/WebHandlerImpl.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/AsyncWebSocket.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/AsyncWebSynchronization.h \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/AsyncEventSource.h

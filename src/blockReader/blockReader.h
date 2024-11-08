@@ -5,12 +5,10 @@
 #include <SPI.h>
 #include <string>
 
-void readPage(int page);
-
-void idPrinting();
-
+std::string getModelId();
+void readingRC522();
 extern MFRC522 rfid;
 
-extern std::string id;
+extern std::string id_model;
 
 #endif // !BLOCK_READER

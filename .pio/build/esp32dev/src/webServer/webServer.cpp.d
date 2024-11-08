@@ -1,6 +1,9 @@
 .pio/build/esp32dev/src/webServer/webServer.cpp.o: \
  src/webServer/webServer.cpp src/webServer/webServer.h \
- .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/ESPAsyncWebServer.h \
+ src/blockReader/blockReader.h \
+ /home/pedro0210/.platformio/lib/MFRC522/src/MFRC522.h \
+ /home/pedro0210/.platformio/lib/MFRC522/src/require_cpp11.h \
+ /home/pedro0210/.platformio/lib/MFRC522/src/deprecated.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp_arduino_version.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
@@ -135,6 +138,12 @@
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src/SPI.h \
+ /home/pedro0210/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.h \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson.hpp \
+ .pio/libdeps/esp32dev/ArduinoJson/src/ArduinoJson/Configuration.hpp \
+ .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/ESPAsyncWebServer.h \
  /home/pedro0210/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
  .pio/libdeps/esp32dev/ESP\ Async\ WebServer/src/StringArray.h \
  .pio/libdeps/esp32dev/WiFi/src/WiFi.h \

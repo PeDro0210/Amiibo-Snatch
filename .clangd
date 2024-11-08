@@ -1,6 +1,14 @@
 Diagnostics:
+  #Like dude, fr clangd doing shit
   Suppress: 
+  - typecheck_member_reference_struct_union
   - ovl_no_viable_member_function_in_call
   - drv_unknown_argument
   - drv_unknown_argument_with_suggestion
   - pp_file_not_found
+  - typecheck_invalid_operands
+  - typecheck_convert_incompatible
+  - typecheck_convert_pointer_int
+
+CompileFlags:
+  Remove: [-fno-tree-switch-conversion, -mtext-section-literals, -mlongcalls, -fstrict-volatile-bitfields]
