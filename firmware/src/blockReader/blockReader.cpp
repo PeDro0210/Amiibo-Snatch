@@ -18,7 +18,7 @@
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 
-std::string id_model;
+std::string id_model = "";
 
 void byteCaster(byte buffer[]) {
   std::stringstream ss;
@@ -44,6 +44,7 @@ void readPage(int page) {
   byte buffer[18]; // Buffer to hold read data (4 bytes per page)
   byte size = sizeof(buffer);
 
+  // For reading the blocks
   MFRC522::StatusCode status =
       rfid.MIFARE_Read(page, buffer, &size); // best line 2024
 
@@ -58,15 +59,7 @@ void readPage(int page) {
   byteCaster(buffer);
 }
 
-std::string getModelId() {
-  // Read only pages 21 and 22 (model ID inform in )
-  readPage(21);
-  delay(10); // Small delay for readability
-  readPage(22);
-  delay(10); // Small delay for readability
-
-  return id_model;
-}
+std::string getModelId() { return id_model; }
 
 void readingRC522() {
   // Read only pages 21 and 22 (model ID inform in )

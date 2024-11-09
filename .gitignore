@@ -1,6 +1,11 @@
 .DS_Store
-frontend/node_modules
+frontend/node_modules/
+backend/bin/
+backend/include/
+backend/lib/
+*.cfg
+.pio/
 backend/bin
 backend/include
 backend/lib
-*.cfg
+backend/lib64

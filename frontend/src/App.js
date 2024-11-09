@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+
+//TODO: create a dir name called pages, to put the page in there, and call it in here
 function App() {
   return (
     <div className="App">
