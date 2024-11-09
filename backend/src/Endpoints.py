@@ -6,7 +6,7 @@ a json with this structure
 {
     data:{
         "amiiboSeries",
-
+        //and the rest of the data for the api
     }
 
 }
