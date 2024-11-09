@@ -4,8 +4,8 @@
 AsyncWebServer server(80);
 
 void endpoints() {
-  server.on("/status", HTTP_GET, [](AsyncWebServerRequest *request) {
-    StaticJsonDocument<200> jsonDoc;
+  server.on("/getid", HTTP_GET, [](AsyncWebServerRequest *request) {
+    StaticJsonDocument<200> jsonDoc; // fuck this shit
     jsonDoc["data"] = getModelId();
 
     // Serialize JSON to string
@@ -14,5 +14,6 @@ void endpoints() {
 
     // Send JSON response
     request->send(200, "application/json", jsonResponse);
+    resetId();
   });
 }

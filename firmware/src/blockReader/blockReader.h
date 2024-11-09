@@ -12,6 +12,8 @@ void readPage(int page);
 
 void idPrinting();
 
+void resetId();
+
 extern MFRC522 rfid;
 
 extern std::string id_model;

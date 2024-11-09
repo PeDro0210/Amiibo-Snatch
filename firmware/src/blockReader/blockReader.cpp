@@ -1,5 +1,6 @@
 #include "blockReader.h"
 #include <iomanip>
+#include <sstream> // Add this line to include the <sstream> header
 
 //* ------
 // *             MFRC522
@@ -35,10 +36,9 @@ void byteCaster(byte buffer[]) {
   }
 }
 
-void idPrinting() {
-  Serial.println(id_model.c_str());
-  id_model = ""; // restart the id
-}
+void idPrinting() { Serial.println(id_model.c_str()); }
+
+void resetId() { id_model = ""; }
 
 void readPage(int page) {
   byte buffer[18]; // Buffer to hold read data (4 bytes per page)
