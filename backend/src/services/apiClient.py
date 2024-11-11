@@ -7,7 +7,7 @@ import requests
 
 
 def get_amiibo_id_from_esp32():
-    esp32_url = 'http:///getid' #TODO:Change to env variable
+    esp32_url = '' #TODO:Change to env variable
     try:
         response = requests.get(esp32_url)
         response.raise_for_status()

@@ -1,5 +1,5 @@
 from flask import jsonify
-import apiClient as api
+import services.apiClient as api
 
 def amiibo_info():
 

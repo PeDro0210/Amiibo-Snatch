@@ -9,3 +9,6 @@ CORS(app) #TODO: manage the Cors
 @app.route('/amiibo', methods=['GET'])
 def amiibo_route():
     return services.amiibo_info() 
+
+if __name__ == '__main__':
+    app.run(debug=True)
