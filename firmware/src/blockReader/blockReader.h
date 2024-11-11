@@ -5,6 +5,9 @@
 #include <SPI.h>
 #include <string>
 
+#define SS_PIN 5
+#define RST_PIN 22
+
 std::string getModelId();
 void readingRC522();
 

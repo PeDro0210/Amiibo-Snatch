@@ -1,7 +1,8 @@
 #include "blockReader/blockReader.h"
 #include "webServer/webServer.h"
-#include <WiFiMulti.h>
+
 #include <WiFi.h>
+#include <WiFiMulti.h>
 
 //-------------------------------------
 // Typical pin layout used:
@@ -17,13 +18,14 @@
 // * SPI SCK     SCK          18
 //------ESP32 RFID setting ----------------
 
-char* ssid = "hola";     // Reemplaza con tu SSID de Wi-Fi
-char* password = "penesitorico"; // Reemplaza con tu contraseña de Wi-Fi
+char *ssid = "Internet de Pedro"; // Reemplaza con tu SSID de Wi-Fi
+char *password = "4NJ667300657";  // Reemplaza con tu contraseña de Wi-Fi
 
 void setup() {
-  Serial.begin(115200); // Asegúrate de que el monitor serial esté configurado a 115200
-  SPI.begin();          // Inicializa el bus SPI
-  rfid.PCD_Init();      // Inicializa el lector MFRC522
+  Serial.begin(
+      9600);   // Asegúrate de que el monitor serial esté configurado a 115200
+  SPI.begin(); // Inicializa el bus SPI
+  rfid.PCD_Init(); // Inicializa el lector MFRC522
 
   // Conexión a Wi-Fi
   WiFi.begin(ssid, password);
@@ -32,7 +34,7 @@ void setup() {
     delay(1000);
     Serial.print(".");
   }
-  
+
   Serial.println("\n¡Conectado a Wi-Fi!");
   Serial.println("Dirección IP: ");
   Serial.println(WiFi.localIP());
@@ -44,12 +46,12 @@ void setup() {
 void loop() {
   if (!rfid.PICC_IsNewCardPresent() || !rfid.PICC_ReadCardSerial()) {
     delay(50); // verifica si hay una nueva tarjeta
+
     return;
   }
 
   readingRC522();
   idPrinting();
-
   // Detiene la comunicación con la tarjeta
   rfid.PICC_HaltA();
 }

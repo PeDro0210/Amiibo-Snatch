@@ -14,9 +14,6 @@
 // * SPI SCK     SCK          18
 //------ESP32 RFID setting ----------------
 
-#define SS_PIN 5
-#define RST_PIN 22
-
 MFRC522 rfid(SS_PIN, RST_PIN);
 
 std::string id_model = "";
