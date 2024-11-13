@@ -1,0 +1,71 @@
+/* FILE: pages/AmiiboPage.css */
+.amiibo-page {
+    text-align: center;
+    position: relative;
+  }
+  
+  .amiibo-background {
+    background-image: url('https://images.unsplash.com/photo-1612404459571-ccef4b6588e7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Reemplaza con la URL directa de la imagen */
+    background-size: cover;
+    height: 100vh;
+    filter: blur(8px);
+  }
+  
+  .amiibo-content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .amiibo-logo {
+    width: 700px;
+    margin-bottom: 0px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px); /* Empieza un poco más arriba */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Termina en su posición original */
+    }
+  }
+  
+  .amiibo-popup {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    text-align: left;
+  }
+
+  .micro-5-regular {
+    font-family: "Micro 5", sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    color: #ff0000;
+    font-style: normal;
+    margin-top: -40px;
+    white-space: nowrap; 
+    overflow: hidden;
+    border-right: 0.15em solid rgb(252, 252, 252);
+    animation: typing 3s steps(40, end), blink-caret 0.55s step-end infinite; 
+  }
+
+  /* Animación de escritura */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Incrementa la anchura del texto de 0 a 100% */
+  }
+  
+  /* Animación del parpadeo del cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+
