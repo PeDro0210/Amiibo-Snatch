@@ -20,6 +20,7 @@
   
   .amiibo-logo {
     width: 700px;
+    margin-top: 400px;
     margin-bottom: 0px;
     animation: fadeIn 2s ease-in-out;
   }
@@ -37,11 +38,18 @@
   
   .amiibo-popup {
     background-color: white;
+    font-family: "Kode Mono", monospace;
+    color: black;
     border-radius: 15px;
+    font-size: 20px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: inline-block;
     text-align: left;
+    letter-spacing: -1.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    animation: fadeIn 2s ease-in-out;
   }
 
   .micro-5-regular {
@@ -51,6 +59,7 @@
     color: #ff0000;
     font-style: normal;
     margin-top: -40px;
+    margin-bottom: 60px;
     white-space: nowrap; 
     overflow: hidden;
     border-right: 0.15em solid rgb(252, 252, 252);
