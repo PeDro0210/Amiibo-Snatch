@@ -62,6 +62,7 @@ void readPage(int page) {
 std::string getModelId() { return id_model; }
 
 void readingRC522() {
+  id_model = "";
   // Read only pages 21 and 22 (model ID inform in )
   readPage(21);
   delay(10); // Small delay for readability

@@ -14,6 +14,5 @@ void endpoints() {
 
     // Send JSON response
     request->send(200, "application/json", jsonResponse);
-    resetId();
   });
 }

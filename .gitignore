@@ -9,3 +9,4 @@ backend/bin
 backend/include
 backend/lib
 backend/lib64
+*.env
