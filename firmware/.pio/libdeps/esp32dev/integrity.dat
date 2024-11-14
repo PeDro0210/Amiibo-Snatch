@@ -1,7 +1,0 @@
-arduino-libraries/WiFi
-me-no-dev/ESP Async WebServer@^1.2.4
-MFRC522
-me-no-dev/AsyncTCP@^1.1.1
-SPIFFS
-FS
-bblanchon/ArduinoJson@^7.2.0

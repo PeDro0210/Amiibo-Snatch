@@ -1,7 +1,7 @@
 // FILE: App.js
 import React from 'react';
 import './App.css';
-import AmiiboPage from './pages/AmiiboPage';
+import AmiiboPage from './pages/AmiiboPage.js';
 
 function App() {
   return (

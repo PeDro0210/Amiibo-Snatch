@@ -1,41 +1,45 @@
 // FILE: pages/AmiiboPage.js
 import React, { useState, useEffect } from 'react';
-import './AmiiboPage.css';
+import '../styles/AmiiboPage.css';
+import '../components/AmiiboPopUp.js'
+import AmiiboPopUp from '../components/AmiiboPopUp.js';
 
 function AmiiboPage() {
   const [amiiboData, setAmiiboData] = useState(null);
 
   useEffect(() => {
-    // Simulación de la detección del Amiibo
-    const fetchAmiiboData = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/amiibo');
-        const data = await response.json();
-        setAmiiboData(data);
-      } catch (error) {
-        console.error('Error fetching amiibo data:', error);
-      }
-    };
+    //    const fetchAmiiboData = async () => {
+    //      try {
+    //        const response = await fetch('http://localhost:5000/amiibo');
+    //        const data = await response.json();
+    //        setAmiiboData(data);
+    //      } catch (error) {
+    //        console.error('Error fetching amiibo data:', error);
+    //      }
+    //    };
 
-    // Simular la detección del Amiibo después de 3 segundos
-    setTimeout(fetchAmiiboData, 3000);
+    //tries to fetch new info every 3 seconds
+    //    setTimeout(fetchAmiiboData, 3000);
   }, []);
 
   return (
     <div className="amiibo-page">
-      <div className="amiibo-background">
-        {/* Espacio para la imagen de fondo estilo Mario */}
-      </div>
+      <div className="amiibo-background"></div>
       <div className="amiibo-content">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Amiibo_logo.png/1280px-Amiibo_logo.png" alt="Amiibo" className="amiibo-logo" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/amiibo_logo.png/1280px-amiibo_logo.png"
+          alt="amiibo"
+          className="amiibo-logo"
+        />
         <p className="micro-5-regular">Acerca tu personaje al lector</p>
+
         {amiiboData && (
-          <div className="amiibo-popup">
-            <img src={amiiboData.image} alt={amiiboData.character} />
-            <p>Amiibo Series: {amiiboData.amiiboSeries}</p>
-            <p>Character: {amiiboData.character}</p>
-            <p>Game Series: {amiiboData.gameSeries}</p>
-          </div>
+          <AmiiboPopUp
+            image={amiiboData.image}
+            character={amiiboData.character}
+            gameSeries={amiiboData.gameSeries}
+            amiiboSeries={amiiboData.amiiboSeries}
+          />
         )}
       </div>
     </div>
